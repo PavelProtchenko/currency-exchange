@@ -1,3 +1,3 @@
 class Currency < ApplicationRecord
-  validates :amount, :currency_from, :currency_to, presence: true
+  validates :base, :date, :rates, presence: true
 end

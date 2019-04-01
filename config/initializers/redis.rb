@@ -1,1 +1,0 @@
-$redis = Redis::Namespace.new("site_exchange", :redis => Redis.new)

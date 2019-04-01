@@ -42,19 +42,4 @@ class CurrencyFetcher
       OpenStruct.new(base: el['base'], date: el['date'], rates: el['rates'])
     end
   end
-
-  def list_of_currencies
-    currencies = dynamic_url['rates'].keys
-    puts "========== LIST OF AVAILABLE CURRENCIES ==========\n\n#{currencies}\n\n"
-    currencies
-  end
-
-  def currency_values
-    currency_values = dynamic_url['rates'].values
-    currency_values
-  end
 end
-
-# cf.data_extractor.each { |el| Currency.create!(info: el) }
-# cf.data_extractor.each { |el| Currency.update_all(info: el) }
-# cf.data_parser.each { |el| Currency.create!(base: el.base, date: el.date, rates: el.rates) }

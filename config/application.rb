@@ -21,7 +21,6 @@ module CurrencyExchange
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 10.seconds }
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -34,6 +33,3 @@ module CurrencyExchange
     config.api_only = true
   end
 end
-
-
-# Rails.cache.fetch("#{cache_key}/competing_price", expires_in: 12.hours)
